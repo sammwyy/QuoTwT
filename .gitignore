@@ -1,0 +1,6 @@
+# Modules and project build.
+/node_modules
+/build
+
+# Secrets
+.env
