@@ -1,3 +1,21 @@
 <%- include ("../layout/head.ejs") -%>
-<h1>Hello World</h1>
+<div class="container hero">
+  <h1>¿Tus amigos te conocen?</h1>
+  <p>
+    ¿Cuanto saben de ti tus amigos? Descubrelo creando divertidas encuestas para
+    saber cuanto te conocen.
+  </p>
+  <div class="hero-form">
+    <a href="/create" class="btn btn-primary btn-lg btn-block m-1"
+      >Crear encuesta</a
+    >
+    <a href="/list" class="btn btn-secondary btn-lg btn-block m-1"
+      >Ver mis encuestas</a
+    >
+  </div>
+  <small class="text-muted"
+    >Al crear una encuesta aceptas los
+    <a href="/terms">Terminos y condiciones</a>.</small
+  >
+</div>
 <%- include ("../layout/foot.ejs") -%>
