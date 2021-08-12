@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 
 import indexRoutes from "./frontend/routes/index.routes";
+import quizRoutes from "./frontend/routes/quiz.routes";
 
 const app = express();
 
@@ -14,5 +15,6 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 
 /* Routes */
 app.use("/", indexRoutes);
+app.use("/", quizRoutes);
 
 export default app;

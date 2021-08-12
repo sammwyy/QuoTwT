@@ -6,3 +6,8 @@
 .hero-form {
     padding-bottom: 20px;
 }
+
+.modal {
+    background-color: #0007;
+    transition: .3s ease-in-out all!important;
+}

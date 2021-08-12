@@ -1,0 +1,50 @@
+<%- include ("../layout/head.ejs") -%>
+
+<!-- Modal -->
+<div class="modal fade" id="create-question-modal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Crear pregunta</h5>
+          </div>
+          <form id="modal-form">
+          <div class="modal-body">
+            <div class="form-group m-2">
+              <label class="mb-2" for="">Título de tu pregunta</label>
+              <input minlength="1" maxlength="64" required type="text" name="" id="question-title" class="form-control" placeholder="" aria-describedby="helpId">
+            </div>
+            <div class="form-group m-2">
+              <label class="mb-2" for="">Respuestas</label>
+              <small id="helpId" class="text-muted">(La primera debe ser la correcta)</small>
+              <input minlength="1" maxlength="32" required type="text" name="" id="ans-1" class="form-control mt-2" style="border-color: green" placeholder="Tu respuesta correcta" aria-describedby="helpId">
+              <input minlength="1" maxlength="32" required type="text" name="" id="ans-2" class="form-control mt-2" placeholder="Respuesta falsa #1" aria-describedby="helpId">
+              <input minlength="1" maxlength="32" required type="text" name="" id="ans-3" class="form-control mt-2" placeholder="Respuesta falsa #2" aria-describedby="helpId">
+              <input minlength="1" maxlength="32" required type="text" name="" id="ans-4" class="form-control mt-2" placeholder="Respuesta falsa #3" aria-describedby="helpId">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button onclick="hideModal();" type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+<div class="container hero">
+  <h2>Tu encuesta</h2>
+  <span>Preguntas disponibles (<span id="question-counter">0</span>/10)</span>
+  <div class="quiz-form">
+    <button id="add-question-btn" type="button" onclick="showCreateModal()" class="btn btn-primary btn-lg btn-block m-1"
+      >Añadir pregunta</a
+    >
+    <button id="create-quiz-btn" type="button" onclick="createQuiz()" class="btn btn-success btn-lg btn-block m-1"
+      >Crear cuestionario</a
+    >
+  </div>
+
+  <div class="mt-5" id="question-list"></div>
+</div>
+
+<script src="/assets/js/quiz-creator.js"></script>
+<%- include ("../layout/foot.ejs") -%>
