@@ -30,6 +30,13 @@ app.pushState = (key, value) => {
   app.setState(key, state);
 };
 
+app.shiftState = (key) => {
+  const state = app.state[key] || [];
+  const item = state.shift();
+  app.setState(key, state);
+  return item;
+};
+
 app.setState = (key, value) => {
   const oldState = app.state[key];
   const newState = value;

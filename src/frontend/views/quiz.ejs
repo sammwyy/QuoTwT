@@ -1,0 +1,69 @@
+<%- include ("../layout/head.ejs") -%>
+
+<div class="container hero">
+  <div id="uploading" style="display: none">
+    <h2>Esperando resultados</h2>
+    <p>Esto puede tomar unos segundos</p>
+    <span>🌼</span>
+  </div>
+
+  <div id="downloading">
+    <h2>Descargando Quiz</h2>
+    <p>Esto puede tomar unos segundos</p>
+    <span>🌸</span>
+  </div>
+
+  <div id="quiz" style="display: none">
+    <small>
+      Pregunta (<span id="current-cuestion">0</span>/<span id="cuestion-counter"
+        >0</span
+      >)
+    </small>
+
+    <h2 id="question-title">Question Title</h2>
+    <div>
+      <button
+        type="button"
+        name=""
+        id="ans1-btn"
+        onclick="submitAns(0)"
+        class="btn btn-outline-primary btn-lg btn-quiz"
+      >
+        Answer #1
+      </button>
+
+      <button
+        type="button"
+        name=""
+        id="ans2-btn"
+        onclick="submitAns(1)"
+        class="btn btn-outline-primary btn-lg btn-quiz"
+      >
+        Answer #2
+      </button>
+
+      <button
+        type="button"
+        name=""
+        id="ans3-btn"
+        onclick="submitAns(2)"
+        class="btn btn-outline-primary btn-lg btn-quiz"
+      >
+        Answer #3
+      </button>
+
+      <button
+        type="button"
+        name=""
+        id="ans4-btn"
+        onclick="submitAns(3)"
+        class="btn btn-outline-primary btn-lg btn-quiz"
+      >
+        Answer #4
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/quiz.js"></script>
+<%- include ("../layout/foot.ejs") -%>
